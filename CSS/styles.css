@@ -1,0 +1,200 @@
+/* Start Variables */
+:root {
+    --main-clr: #009688;
+    --bg-clr: #f1f1f1;
+    --light-clr: #ffffff;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: "roboto", sans-serif;
+}
+.container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+body {
+    background-color: var(--bg-clr, #f1f1f1);
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* End Global Rules */
+
+/* Start Main */
+@media (min-width: 768px) {
+    main .container {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    main .container aside {
+        width: 30%;
+    }
+    main .container section {
+        width: calc(70% - 20px);
+    }
+}
+/* End Main */
+
+/* Start aside */
+main aside {
+    background-color: var(--light-clr, #ffffff);
+    margin-bottom: 20px;
+    box-shadow: 0 0 12px 0px rgb(0 0 0 / 30%);
+}
+main aside > *:not(.picture) {
+    margin: 15px;
+}
+main aside .picture {
+    position: relative;
+}
+main aside .picture img {
+    width: 100%;
+    max-height: auto;
+}
+main aside .picture h1 {
+    margin: 0;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-weight: 400;
+    font-size: 2rem;
+}
+main aside .about {
+    border-bottom: 1px solid #eee;
+}
+main aside .about li {
+    margin-bottom: 20px;
+    color: #888;
+    font-weight: 300;
+}
+main aside .about li i {
+    color: var(--main-clr, #009688);
+    margin-right: 15px;
+}
+main aside > div:nth-child(n+3) {
+    padding-bottom: 20px;
+}
+main aside > div:nth-child(n+3) h2 {
+    color: #666;
+    font-size: 1.25rem;
+    margin: 22px 0;
+}
+main aside > div:nth-child(n+3) h2 i {
+    color: var(--main-clr, #009688);
+    margin-right: 10px;
+    font-size: 1rem;
+}
+main aside > div:nth-child(n+3) ul li h3 {
+    font-weight: 300;
+    font-size: 1.05rem;
+    color: #666;
+}
+main aside > div:nth-child(n+3) ul li .pro-line {
+    position: relative;
+    width: 100%;
+    background-color: #cccccc;
+    border-radius: 20px;
+}
+main aside > .skills .pro-line {
+    height: 18px;
+}
+main aside > .lang .pro-line {
+    height: 24px;
+}
+main aside > div:nth-child(n+3) ul li .pro-line span {
+    display: block;
+    height: 100%;
+    background-color: var(--main-clr, #009688);
+    color: white;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 300;
+    border-radius: 20px;
+}
+/* End aside */
+
+/* Start Section */
+section {
+}
+section article {
+    background-color: var(--light-clr);
+    padding: 30px 20px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 12px 0px rgb(0 0 0 / 30%);
+}
+section article h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+section article h2 i {
+    color: var(--main-clr, #009688);
+    font-size: 2.1rem;
+    margin-right: 15px;
+}
+section article .artcl-row {
+    padding: 10px;
+}
+section article .artcl-row:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+section article .artcl-row h3 {
+    color: #666;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+section article .artcl-row .date {
+    color: var(--main-clr, #009688);
+    font-size: 1.05rem;
+}
+section article .artcl-row .date i {
+    font-size: 1.1rem;
+    margin-right: 15px;
+}
+section article .artcl-row .date span {
+    color: var(--light-clr, #ffffff);
+    background-color: var(--main-clr, #009688);
+    padding: 1px 8px 3px;
+    border-radius: 4px;
+}
+section article .artcl-row p {
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+/* End Section */
+
+/* Start Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: var(--light-clr, #ffffff);
+    background-color: var(--main-clr, #009688);
+    padding: 20px;
+    font-weight: 300;
+    font-size: 1.05rem;
+}
+footer p {
+    margin: 0;
+}
+footer .social i {
+    color: var(--light-clr, #ffffff);
+    font-size: 0.95rem;
+}
+footer .copyright a {
+    color: var(--light-clr, #ffffff);
+}
+/* End Footer */
